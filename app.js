@@ -35,3 +35,9 @@ function capturaDeNombres() {
 // Vaciar el campo de entrada después de digitar un nombre
 limpiarCaja();
 }
+
+// Función que limpia el campo de entrada
+function limpiarCaja() {
+    document.querySelector('#amigo').value = '';
+}
+
