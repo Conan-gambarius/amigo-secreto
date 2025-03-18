@@ -58,3 +58,22 @@ function agregarLista() {
     lista.appendChild(li); 
     }
 }
+
+// Función que sortea un amigo de la lista
+function sorteoAmigos() {
+
+    // Validamos que haya nombres en la lista antes de empezar
+        if (friends.length === 0) {
+        alert('No hay amigos en la lista para sortear.');
+        return;
+        }
+    
+    // Generamos un índice aleatorio dentro del rango del arreglo
+        let amigoAleatorio = Math.floor(Math.random() * friends.length);
+    
+    // Obtenemos un nombre sorteado usando el índice aleartorio
+        let amigoSeleccionado = friends[amigoAleatorio];
+    
+    // Mostramos resultado en la pantalla
+        document.getElementById('resultado').innerHTML = `El amigo elegido es: ${amigoSeleccionado}`;
+    }
