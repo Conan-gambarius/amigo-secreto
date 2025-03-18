@@ -34,6 +34,9 @@ function capturaDeNombres() {
 
 // Vaciar el campo de entrada después de digitar un nombre
 limpiarCaja();
+
+// Actualizamos la lista en la pantalla
+agregarLista();
 }
 
 // Función que limpia el campo de entrada
@@ -41,3 +44,17 @@ function limpiarCaja() {
     document.querySelector('#amigo').value = '';
 }
 
+// Función que actualiza la lista en la pantalla
+function agregarLista() {
+    let lista = document.getElementById('listaAmigos');
+
+// Limpiamos lista antes de agregar nuevos elementos
+    lista.innerHTML = "";
+
+// Recorremos el arreglo y creamos elementos <li> para cada nombre
+    for (let i = 0; i < friends.length; i++) {
+    let li = document.createElement("li");
+    li.textContent = friends[i];
+    lista.appendChild(li); 
+    }
+}
